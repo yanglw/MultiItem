@@ -1,7 +1,7 @@
 package com.github.yanglw.multiitem;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.widget.ListView;
 
 import com.github.yanglw.multiitem.adapter.MultBaseAdapter;
@@ -13,7 +13,7 @@ import com.github.yanglw.multiitem.internal.MultiItemIF;
 
 import java.util.ArrayList;
 
-public class MainActivity extends ActionBarActivity
+public class MainActivity extends Activity
 {
     private ArrayList<MultiItemIF> mList;
 
@@ -32,7 +32,7 @@ public class MainActivity extends ActionBarActivity
     {
         String[] texts = {"有大吗？", "有！你呢？", "我也有。上吧。", "..战斗开始了..", "打啊！你放大啊！", "你tm咋不放大呢？留大抢人头那！Cao的。你个菜b！"};
         int[] types = {1, 0, 1, 2, 1, 0};
-        mList = new ArrayList<MultiItemIF>();
+        mList = new ArrayList<>();
         for (int j = 0; j < 5; j++)
         {
             ChatTime time = new ChatTime();
